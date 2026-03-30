@@ -525,8 +525,57 @@
     .rv.vis{ opacity:1;transform:none; }
 
     /* ── RESPONSIVE ── */
+    /* mobile cube section — hidden by default, shown via JS on small screens */
+    .cube-section-mobile{
+      display:none;
+      text-align:center;
+      padding:60px 0 20px;
+      position:relative;z-index:2;
+    }
+    .cube-section-mobile.show{ display:block; }
+    .cube-section-mobile h2{
+      font-family:'Syne',sans-serif;font-weight:800;
+      font-size:1.6rem;letter-spacing:-.03em;
+      color:var(--text);margin-bottom:6px;
+    }
+    .cube-section-mobile .cube-sub{
+      font-size:.85rem;color:var(--text-muted);margin-bottom:32px;
+    }
+    .cube-mob-scene{
+      width:220px;height:220px;perspective:600px;
+      display:inline-block;position:relative;
+    }
+    .cube-mob{
+      width:100%;height:100%;
+      transform-style:preserve-3d;
+      animation:spin-cube 18s linear infinite;
+    }
+    .cube-mob .face{ width:220px;height:220px; }
+    .cube-mob .face-f{ transform:translateZ(110px); }
+    .cube-mob .face-b{ transform:rotateY(180deg) translateZ(110px); }
+    .cube-mob .face-l{ transform:rotateY(-90deg) translateZ(110px); }
+    .cube-mob .face-r{ transform:rotateY(90deg) translateZ(110px); }
+    .cube-mob .face-t{ transform:rotateX(90deg) translateZ(110px); }
+    .cube-mob .face-bo{ transform:rotateX(-90deg) translateZ(110px); }
+    .cube-mob-wrap{
+      position:relative;display:inline-flex;
+      align-items:center;justify-content:center;
+    }
+    .ring-mob{
+      position:absolute;border:1px solid rgba(240,165,0,.08);
+      border-radius:50%;animation:ring-rotate 20s linear infinite;
+      pointer-events:none;
+    }
+    .ring-mob1{ width:290px;height:290px;top:50%;left:50%;transform:translate(-50%,-50%); }
+    .ring-mob2{ width:360px;height:360px;top:50%;left:50%;transform:translate(-50%,-50%) rotateZ(45deg);animation-duration:28s;animation-direction:reverse; }
+    .cube-hint{
+      margin-top:18px;
+      font-family:'DM Mono',monospace;font-size:.68rem;
+      color:var(--text-muted);letter-spacing:1px;
+    }
+
     @media(max-width:900px){
-      .hero-inner{ grid-template-columns:1fr;gap:40px; }
+      .hero-inner{ grid-template-columns:1fr;gap:0; }
       .hero-visual{ display:none; }
       .stats-row{ grid-template-columns:repeat(2,1fr); }
       .about-grid{ grid-template-columns:1fr; }
@@ -702,6 +751,54 @@
         <span class="stat-l">Technical Skills</span>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ═══════════ MOBILE CUBE SECTION ═══════════ -->
+<section class="cube-section-mobile" id="skills-cube">
+  <div class="wrap">
+    <div class="sec-badge" style="margin-bottom:14px;">◆ WHAT I DO</div>
+    <h2>Skills at a Glance</h2>
+    <p class="cube-sub">Tap to pause &middot; 6 faces, 6 skill areas</p>
+    <div class="cube-mob-wrap">
+      <div class="ring-mob ring-mob1"></div>
+      <div class="ring-mob ring-mob2"></div>
+      <div class="cube-mob-scene">
+        <div class="cube-mob" id="mobcube">
+          <div class="face face-f">
+            <div class="face-icon">⚡</div>
+            <div class="face-label">Full-Stack Dev</div>
+            <div class="face-sub">Laravel · React · JS</div>
+          </div>
+          <div class="face face-b">
+            <div class="face-icon">📊</div>
+            <div class="face-label">Data &amp; Analytics</div>
+            <div class="face-sub">SQL · Power BI</div>
+          </div>
+          <div class="face face-l">
+            <div class="face-icon">🤖</div>
+            <div class="face-label">Embedded Systems</div>
+            <div class="face-sub">ESP32 · STM32 · C++</div>
+          </div>
+          <div class="face face-r">
+            <div class="face-icon">🔗</div>
+            <div class="face-label">Systems Thinking</div>
+            <div class="face-sub">Agile · SDLC</div>
+          </div>
+          <div class="face face-t">
+            <div class="face-icon">🎯</div>
+            <div class="face-label">Problem Solver</div>
+            <div class="face-sub">Always Learning</div>
+          </div>
+          <div class="face face-bo">
+            <div class="face-icon">🏛️</div>
+            <div class="face-label">BRAC University</div>
+            <div class="face-sub">CSE Graduate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cube-hint">6 FACES · 6 SKILL AREAS</div>
   </div>
 </section>
 
@@ -1059,7 +1156,7 @@
       <a href="mailto:azmainalfi.aha@gmail.com" class="contact-card">
         <div class="c-icon">✉️</div>
         <div class="c-title">Email</div>
-        <div class="c-info">azmainalfi.aha@gmail.com</div>
+        <div class="c-info"><span class="__cf_email__" data-cfemail="7e1f04131f17101f121817501f161f3e19131f1712501d1113">[email&#160;protected]</span></div>
       </a>
       <a href="tel:+8801301754756" class="contact-card">
         <div class="c-icon">📞</div>
@@ -1180,6 +1277,35 @@ document.querySelectorAll('.proj-card').forEach(card=>{
     card.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
   });
 });
+
+/* ── MOBILE CUBE SECTION VISIBILITY ── */
+(function(){
+  var cubeSection = document.getElementById('skills-cube');
+  var heroVisual = document.querySelector('.hero-visual');
+  function checkSize(){
+    if(window.innerWidth <= 900){
+      if(cubeSection) cubeSection.classList.add('show');
+      if(heroVisual) heroVisual.style.display = 'none';
+    } else {
+      if(cubeSection) cubeSection.classList.remove('show');
+      if(heroVisual) heroVisual.style.display = '';
+    }
+  }
+  checkSize();
+  window.addEventListener('resize', checkSize);
+  // Also immediately make cube section visible without waiting for scroll reveal
+  if(cubeSection) cubeSection.style.opacity = '1';
+})();
+
+/* ── MOBILE CUBE TAP TO PAUSE ── */
+const mobcube = document.getElementById('mobcube');
+if(mobcube){
+  let paused = false;
+  mobcube.addEventListener('click', () => {
+    paused = !paused;
+    mobcube.style.animationPlayState = paused ? 'paused' : 'running';
+  });
+}
 
 /* ── CUBE PAUSE ON HOVER ── */
 document.getElementById('herocube')?.addEventListener('mouseenter',function(){this.style.animationPlayState='paused';});
