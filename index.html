@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mohammad Azmain Hossain Alfi — CSE Graduate & Analyst</title>
+  <title>Mohammad Azmain Hossain Alfi — Machine Learning &amp; Applied AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="BRAC University CSE graduate | Laravel, Python, C++ | Built civic platforms and robots | Interned at a2i (Govt. of Bangladesh) and Xactidea Ltd">
+  <meta name="description" content="BRAC University CSE graduate working in machine learning, AI evaluation and applied research. Two papers submitted to IEEE ICEI 2026, an open evaluation suite for AI-generated clinical notes, and civic, healthcare and pharmacy software shipped to real users.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
@@ -360,6 +360,8 @@
       display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
       gap:20px;
     }
+    /* two-item grids: auto-fit so the row fills instead of leaving an empty track */
+    .proj-grid.two-up{ grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); }
     .proj-card{
       background:var(--panel);border:1px solid var(--border);
       border-radius:var(--radius-lg);padding:32px 28px;
@@ -584,7 +586,7 @@
     @media(max-width:640px){
       nav a:not(.nav-cta):not(:last-of-type){ display:none; }
       .stats-row{ grid-template-columns:repeat(2,1fr); }
-      .proj-grid{ grid-template-columns:1fr; }
+      .proj-grid, .proj-grid.two-up{ grid-template-columns:1fr; }
       .skills-grid{ grid-template-columns:1fr; }
       .contact-grid{ grid-template-columns:1fr 1fr; }
       section{ padding:70px 0; }
@@ -613,22 +615,22 @@
   <div class="ticker-label">LIVE</div>
   <div style="overflow:hidden;flex:1;">
     <div class="ticker-track">
-      <span class="ticker-item">📊 <b>Power BI</b> — Currently Learning</span>
-      <span class="ticker-item">🗃️ <b>SQL Advanced</b> — In Progress</span>
-      <span class="ticker-item">📈 <b>Business Analytics</b> — Exploring</span>
-      <span class="ticker-item">🎓 <b>BRAC University</b> — CSE Graduate</span>
+      <span class="ticker-item">🔬 <b>2 Research Papers</b> — Submitted to IEEE ICEI 2026</span>
+      <span class="ticker-item">🩺 <b>NoteFidelity</b> — Open Evaluation Suite, In Progress</span>
+      <span class="ticker-item">🎓 <b>BRAC University</b> — CSE Graduate, 2026</span>
+      <span class="ticker-item">📈 <b>GPA 3.41 Final Year</b> · 3.61 Last Semester</span>
+      <span class="ticker-item">✅ <b>IELTS Academic 7.5</b> — Feb 2026</span>
+      <span class="ticker-item">🛠️ <b>Python · PyTorch · Next.js · FastAPI</b></span>
       <span class="ticker-item">📍 <b>Dhaka, Bangladesh</b></span>
-      <span class="ticker-item">✅ <b>IELTS Band 7.5</b> — Feb 2026</span>
-      <span class="ticker-item">🛠️ <b>Laravel · Python · C++</b></span>
       <span class="ticker-item">🤝 <b>Open to Opportunities</b></span>
       <!-- duplicate for seamless loop -->
-      <span class="ticker-item">📊 <b>Power BI</b> — Currently Learning</span>
-      <span class="ticker-item">🗃️ <b>SQL Advanced</b> — In Progress</span>
-      <span class="ticker-item">📈 <b>Business Analytics</b> — Exploring</span>
-      <span class="ticker-item">🎓 <b>BRAC University</b> — CSE Graduate</span>
+      <span class="ticker-item">🔬 <b>2 Research Papers</b> — Submitted to IEEE ICEI 2026</span>
+      <span class="ticker-item">🩺 <b>NoteFidelity</b> — Open Evaluation Suite, In Progress</span>
+      <span class="ticker-item">🎓 <b>BRAC University</b> — CSE Graduate, 2026</span>
+      <span class="ticker-item">📈 <b>GPA 3.41 Final Year</b> · 3.61 Last Semester</span>
+      <span class="ticker-item">✅ <b>IELTS Academic 7.5</b> — Feb 2026</span>
+      <span class="ticker-item">🛠️ <b>Python · PyTorch · Next.js · FastAPI</b></span>
       <span class="ticker-item">📍 <b>Dhaka, Bangladesh</b></span>
-      <span class="ticker-item">✅ <b>IELTS Band 7.5</b> — Feb 2026</span>
-      <span class="ticker-item">🛠️ <b>Laravel · Python · C++</b></span>
       <span class="ticker-item">🤝 <b>Open to Opportunities</b></span>
     </div>
   </div>
@@ -643,6 +645,7 @@
     </div>
     <nav>
       <a href="#home">Home</a>
+      <a href="#research">Research</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
@@ -668,15 +671,16 @@
           <span id="tw"></span><span class="type-cur"></span>
         </div>
         <p class="hero-desc rv" style="transition-delay:.3s">
-          I'm a Computer Science &amp; Engineering graduate from BRAC University. I've spent the last four years
-          building things — civic platforms, booking systems, embedded robots — and two internships figuring
-          out how teams and products actually work in practice. I'm drawn to problems that sit at the
-          intersection of people, process and technology.
+          I'm a Computer Science &amp; Engineering graduate from BRAC University working in machine learning,
+          AI evaluation and applied research. I've written two papers on where machine learning claims hold up
+          under controlled testing, built an open evaluation suite for AI-generated clinical notes, and shipped
+          civic, pharmacy and embedded systems that people actually use. I care about building AI that is
+          practical and trustworthy — and about saying honestly when it isn't.
         </p>
         <div class="tag-row rv" style="transition-delay:.35s">
-          <span class="tag tag-gold">📊 Learning Power BI</span>
-          <span class="tag tag-blue">🗃️ SQL Advanced</span>
-          <span class="tag tag-teal">📈 Business Analytics</span>
+          <span class="tag tag-gold">🔬 Applied ML Research</span>
+          <span class="tag tag-blue">🩺 Healthcare AI</span>
+          <span class="tag tag-teal">⚙️ Reliable AI Systems</span>
         </div>
         <div class="cta-row rv" style="transition-delay:.45s">
           <a href="#projects" class="btn btn-primary">
@@ -699,28 +703,28 @@
           <div class="cube" id="herocube">
             <div class="face face-f">
               <div class="face-icon">⚡</div>
-              <div class="face-label">Full-Stack Dev</div>
-              <div class="face-sub">Laravel · React · JS</div>
+              <div class="face-label">Machine Learning</div>
+              <div class="face-sub">Python · PyTorch</div>
             </div>
             <div class="face face-b">
-              <div class="face-icon">📊</div>
-              <div class="face-label">Data & Analytics</div>
-              <div class="face-sub">SQL · Power BI</div>
+              <div class="face-icon">🔬</div>
+              <div class="face-label">Applied Research</div>
+              <div class="face-sub">2 Papers · ICEI 2026</div>
             </div>
             <div class="face face-l">
+              <div class="face-icon">🩺</div>
+              <div class="face-label">Healthcare AI</div>
+              <div class="face-sub">Clinical NLP · Imaging</div>
+            </div>
+            <div class="face face-r">
+              <div class="face-icon">🌐</div>
+              <div class="face-label">Full-Stack Dev</div>
+              <div class="face-sub">Next.js · FastAPI</div>
+            </div>
+            <div class="face face-t">
               <div class="face-icon">🤖</div>
               <div class="face-label">Embedded Systems</div>
               <div class="face-sub">ESP32 · STM32 · C++</div>
-            </div>
-            <div class="face face-r">
-              <div class="face-icon">🔗</div>
-              <div class="face-label">Systems Thinking</div>
-              <div class="face-sub">Agile · SDLC</div>
-            </div>
-            <div class="face face-t">
-              <div class="face-icon">🎯</div>
-              <div class="face-label">Problem Solver</div>
-              <div class="face-sub">Always Learning</div>
             </div>
             <div class="face face-bo">
               <div class="face-icon">🏛️</div>
@@ -735,20 +739,20 @@
     <!-- stats -->
     <div class="stats-row rv" style="transition-delay:.6s">
       <div class="stat-box">
-        <span class="stat-n" data-target="5">0</span>
-        <span class="stat-l">Major Projects</span>
+        <span class="stat-n" data-target="2">0</span>
+        <span class="stat-l">Research Papers</span>
       </div>
       <div class="stat-box">
         <span class="stat-n" data-target="6">0</span>
-        <span class="stat-l">Months Experience</span>
+        <span class="stat-l">Major Projects</span>
       </div>
       <div class="stat-box">
         <span class="stat-n" data-target="2">0</span>
         <span class="stat-l">Internships</span>
       </div>
       <div class="stat-box">
-        <span class="stat-n" data-target="12">0</span>
-        <span class="stat-l">Technical Skills</span>
+        <span class="stat-n" data-target="8" data-suffix="+">0</span>
+        <span class="stat-l">Months Experience</span>
       </div>
     </div>
   </div>
@@ -767,28 +771,28 @@
         <div class="cube-mob" id="mobcube">
           <div class="face face-f">
             <div class="face-icon">⚡</div>
-            <div class="face-label">Full-Stack Dev</div>
-            <div class="face-sub">Laravel · React · JS</div>
+            <div class="face-label">Machine Learning</div>
+            <div class="face-sub">Python · PyTorch</div>
           </div>
           <div class="face face-b">
-            <div class="face-icon">📊</div>
-            <div class="face-label">Data &amp; Analytics</div>
-            <div class="face-sub">SQL · Power BI</div>
+            <div class="face-icon">🔬</div>
+            <div class="face-label">Applied Research</div>
+            <div class="face-sub">2 Papers · ICEI 2026</div>
           </div>
           <div class="face face-l">
+            <div class="face-icon">🩺</div>
+            <div class="face-label">Healthcare AI</div>
+            <div class="face-sub">Clinical NLP · Imaging</div>
+          </div>
+          <div class="face face-r">
+            <div class="face-icon">🌐</div>
+            <div class="face-label">Full-Stack Dev</div>
+            <div class="face-sub">Next.js · FastAPI</div>
+          </div>
+          <div class="face face-t">
             <div class="face-icon">🤖</div>
             <div class="face-label">Embedded Systems</div>
             <div class="face-sub">ESP32 · STM32 · C++</div>
-          </div>
-          <div class="face face-r">
-            <div class="face-icon">🔗</div>
-            <div class="face-label">Systems Thinking</div>
-            <div class="face-sub">Agile · SDLC</div>
-          </div>
-          <div class="face face-t">
-            <div class="face-icon">🎯</div>
-            <div class="face-label">Problem Solver</div>
-            <div class="face-sub">Always Learning</div>
           </div>
           <div class="face face-bo">
             <div class="face-icon">🏛️</div>
@@ -811,15 +815,20 @@
     </div>
     <div class="about-grid rv" style="transition-delay:.1s">
       <div>
-        <p class="about-p">I'm a CSE graduate who's spent most of university building things — some for class, some because a problem bothered me enough to do something about it. I've worked on web platforms, embedded systems, and spent time inside real organisations understanding how software actually gets used, not just how it gets built.</p>
-        <p class="about-p">I'm naturally someone who talks to people, asks questions, and tries to understand the <em>why</em> behind things before jumping to the how. That's what pulled me toward business analysis — it's a role where the technical background I have actually helps, but the work is about understanding people and problems first.</p>
-        <p class="about-p">Right now I'm wrapping up my degree and deepening my skills in data and analytics tools on the side. I learn fast, I document well, and I don't pretend to know things I don't.</p>
+        <p class="about-p">I'm a CSE graduate from BRAC University working in machine learning, AI evaluation and applied research. My degree started slowly and finished strongly — 3.41 in my final year and 3.61 in my last semester — as I moved from coursework into machine learning and research and found the thing I actually wanted to do.</p>
+        <p class="about-p">Most of my recent work is about testing whether AI claims survive contact with evidence. I wrote two papers in 2026 on exactly that: one showing quantum machine learning does not beat ordinary models on pharmaceutical data, and one finding that the intuitive fix for day-to-day drift in muscle-signal decoding is the wrong one. I build the software too — a civic reporting platform, a pharmacy system running across branches, and an open evaluation suite for AI-generated clinical notes.</p>
+        <p class="about-p">I set the standard for a result before I start, and I publish the outcome even when it isn't the one I wanted. I learn fast, I document well, and I don't pretend to know things I don't.</p>
       </div>
       <div class="card-row">
         <div class="cred-card">
           <div class="cred-label" style="color:var(--gold)">Degree</div>
           <div class="cred-main">B.Sc. Computer Science &amp; Engineering</div>
-          <div class="cred-sub">BRAC University, Dhaka</div>
+          <div class="cred-sub">BRAC University, Dhaka · 2021–2026</div>
+        </div>
+        <div class="cred-card">
+          <div class="cred-label" style="color:var(--gold)">Academic Trajectory</div>
+          <div class="cred-main">CGPA 3.04 — rising to 3.61</div>
+          <div class="cred-sub">3.41 final year · 3.61 last semester</div>
         </div>
         <div class="cred-card">
           <div class="cred-label" style="color:#7FB3FF">English Proficiency</div>
@@ -827,9 +836,9 @@
           <div class="cred-sub">Listening 8.5 · Speaking 7.5 · Feb 2026</div>
         </div>
         <div class="cred-card">
-          <div class="cred-label" style="color:#4ECFAE">A-Levels</div>
+          <div class="cred-label" style="color:#4ECFAE">A-Levels &amp; IGCSE</div>
           <div class="cred-main">Triple A — Pearson Edexcel</div>
-          <div class="cred-sub">Mathematics · Chemistry · Physics · 2021</div>
+          <div class="cred-sub">Maths · Physics · Chemistry · A* at IGCSE</div>
         </div>
       </div>
     </div>
@@ -842,124 +851,206 @@
   </div>
 </section>
 
+<!-- ═══════════ RESEARCH ═══════════ -->
+<section id="research">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <div class="sec-badge">✦ RESEARCH</div>
+      <h2 class="sec-title">Papers</h2>
+      <p class="sec-sub">Two independent papers written in 2026 and submitted in July 2026 to the IEEE Conference on Engineering Informatics (ICEI 2026, Australia track). Neither is published. Full manuscripts available on request.</p>
+    </div>
+
+    <div class="proj-grid two-up">
+
+      <div class="proj-card rv">
+        <div class="proj-top">
+          <div class="proj-icon">⚛️</div>
+          <span class="proj-badge">FIRST AUTHOR · 2026</span>
+        </div>
+        <div class="proj-title">Mapping the Genuine Advantage of Quantum AI in Pharmaceutical Manufacturing</div>
+        <div class="proj-desc" style="color:var(--text-muted);font-size:.8rem;margin-top:2px;">With F. J. Afseen</div>
+        <div class="proj-section-label">The Question</div>
+        <div class="proj-desc">Drug companies are being urged to fund quantum computing for tasks like inspecting tablets on a production line and screening candidate molecules. These are expensive, long-term bets, and the claim behind them had not been tested under controlled conditions.</div>
+        <div class="proj-section-label">The Finding</div>
+        <div class="proj-desc">Across seven public datasets — one identical process, changing only the data — quantum models did no better than ordinary ones. I showed that two of the three standard ways of encoding data into a quantum circuit are ordinary mathematics in disguise, so they cannot win in principle, and traced the remaining gap on images to how the data was compressed rather than to the quantum model. The paper concludes that the nearer-term value of quantum computing lies in simulating molecules, not classifying data, and gives a short set of checks a company can run before funding a pilot.</div>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">PennyLane</span>
+          <span class="proj-tag">scikit-learn</span>
+          <span class="proj-tag">Experiment Design</span>
+        </div>
+        <span class="proj-link" style="color:var(--text-muted);cursor:default;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Manuscript available on request
+        </span>
+      </div>
+
+      <div class="proj-card rv" style="transition-delay:.05s">
+        <div class="proj-top">
+          <div class="proj-icon">💪</div>
+          <span class="proj-badge">CO-AUTHOR · 2026</span>
+        </div>
+        <div class="proj-title">What Changes and What Survives Across Days in Surface EMG Decoding</div>
+        <div class="proj-desc" style="color:var(--text-muted);font-size:.8rem;margin-top:2px;">With M. Kabir</div>
+        <div class="proj-section-label">The Question</div>
+        <div class="proj-desc">Surface electromyography reads muscle activity through electrodes on the skin and drives prosthetic hands, rehabilitation devices and wearable controllers. Accuracy falls sharply the next time the device is worn, which is one reason people stop using them. Across 63 participants in two public datasets we tested the two intuitive fixes: place electrodes on each person's strongest muscle site, and correct for electrode movement afterwards.</div>
+        <div class="proj-section-label">The Finding</div>
+        <div class="proj-desc">The fix is rescaling the signal, not repositioning the electrodes. Concentrating electrodes on the strongest site raises the signal 1.7-fold within one session, but across days it loses to spreading them out, and adding more electrodes does not buy the loss back. No correction for electrode movement beat simply doing nothing. What works is rescaling each channel from a single unlabelled calibration contraction — recovering 44.5% of the accuracy lost between days and matching supervised retraining, without asking the user for new labels.</div>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">sEMG Datasets</span>
+          <span class="proj-tag">ML Classifiers</span>
+          <span class="proj-tag">Cross-Day Evaluation</span>
+        </div>
+        <span class="proj-link" style="color:var(--text-muted);cursor:default;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Manuscript available on request
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ PROJECTS ═══════════ -->
 <section id="projects">
   <div class="wrap">
     <div class="sec-hd rv">
       <div class="sec-badge">◆ PORTFOLIO</div>
       <h2 class="sec-title">Featured Projects</h2>
-      <p class="sec-sub">Things I've built — some out of curiosity, some out of necessity</p>
+      <p class="sec-sub">Things I've built — some for a course, most because a problem bothered me enough to do something about it</p>
     </div>
 
     <div class="proj-grid">
 
       <div class="proj-card rv">
         <div class="proj-top">
-          <div class="proj-icon">🤖</div>
-          <span class="proj-badge">IoT / Robotics</span>
+          <div class="proj-icon">🩺</div>
+          <span class="proj-badge">AI EVALUATION</span>
         </div>
-        <div class="proj-title">Lil Baymax</div>
+        <div class="proj-title">NoteFidelity</div>
+        <div class="proj-desc" style="color:var(--text-muted);font-size:.8rem;margin-top:2px;">Independent project · ongoing · open source</div>
         <div class="proj-section-label">The Problem</div>
-        <div class="proj-desc">Healthcare monitoring in low-resource settings often means someone physically checking on a patient. There's no continuous, mobile way to track vitals and alert caregivers remotely.</div>
+        <div class="proj-desc">Hospitals are starting to use AI that listens to a consultation and writes the clinical note. Scoring these tools by comparing wording against a reference note means a note can look good while omitting something that matters — a medication dose, say.</div>
         <div class="proj-section-label">What I Built</div>
-        <div class="proj-desc">A self-balancing two-wheeled robot that reads live vitals — temperature, SpO₂, heart rate, blood pressure — and sends GSM alerts when values go out of range. PID-tuned balance on ESP32, 3D-printed chassis.</div>
+        <div class="proj-desc">An open evaluation suite that checks whether the facts spoken in the consultation actually reached the note, and grades each missing fact by how much harm it could cause. I built four ways of checking a fact against a note and measured them against clinician judgement. I set the required level of agreement before starting, did not reach it, and published that result rather than lowering the standard. Work continues.</div>
         <div class="proj-tags">
-          <span class="proj-tag">ESP32</span>
-          <span class="proj-tag">PID Control</span>
-          <span class="proj-tag">Healthcare IoT</span>
-          <span class="proj-tag">3D Printing</span>
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">FastAPI</span>
+          <span class="proj-tag">Next.js</span>
+          <span class="proj-tag">Local LLMs</span>
         </div>
-        <a href="https://github.com/azmainalfi22" class="proj-link">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
+        <a href="https://github.com/azmainalfi22/notefidelity" target="_blank" class="proj-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          github.com/azmainalfi22/notefidelity
         </a>
       </div>
 
       <div class="proj-card rv" style="transition-delay:.05s">
         <div class="proj-top">
-          <div class="proj-icon">🏙️</div>
-          <span class="proj-badge">Civic Tech</span>
+          <div class="proj-icon">🔬</div>
+          <span class="proj-badge">MACHINE LEARNING</span>
         </div>
-        <div class="proj-title">Chokh-e-Dekha</div>
+        <div class="proj-title">Skin Cancer Detection from Dermatology Images</div>
+        <div class="proj-desc" style="color:var(--text-muted);font-size:.8rem;margin-top:2px;">University team project · team of three</div>
         <div class="proj-section-label">The Problem</div>
-        <div class="proj-desc">People had no practical way to officially report broken roads or civic issues. And even where channels existed, there was no visibility into what happened after — no accountability, no transparency.</div>
-        <div class="proj-section-label">What I Built</div>
-        <div class="proj-desc">A civic reporting platform where residents log issues with location tags, and admins triage, assign, and close them through a dashboard. Every report has a status trail — so citizens can actually see if anything happened.</div>
+        <div class="proj-desc">Clinical records already carry a lot of signal — age, lesion site, patient history. Before claiming an imaging model helps, you have to measure what the photograph adds on top of what the notes already say.</div>
+        <div class="proj-section-label">What We Built</div>
+        <div class="proj-desc">A controlled comparison of six machine learning models on 10,015 skin lesion photographs. The best image model reached 87% accuracy against 83% for models given only patient details. We split the data by lesion rather than by photograph — several images of one lesion appearing in both training and testing would have flattered the results.</div>
         <div class="proj-tags">
-          <span class="proj-tag">Laravel</span>
-          <span class="proj-tag">MySQL</span>
-          <span class="proj-tag">Google Maps API</span>
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">PyTorch</span>
+          <span class="proj-tag">Transfer Learning</span>
+          <span class="proj-tag">Medical Imaging</span>
         </div>
-        <a href="https://github.com/azmainalfi22" class="proj-link">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <a href="https://github.com/azmainalfi22" target="_blank" class="proj-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           GitHub
         </a>
       </div>
 
       <div class="proj-card rv" style="transition-delay:.1s">
         <div class="proj-top">
-          <div class="proj-icon">✈️</div>
-          <span class="proj-badge">Web App</span>
+          <div class="proj-icon">🏙️</div>
+          <span class="proj-badge">CIVIC TECH · LIVE</span>
         </div>
-        <div class="proj-title">TravelEase</div>
+        <div class="proj-title">Chokh-e-Dekha</div>
+        <div class="proj-desc" style="color:var(--text-muted);font-size:.8rem;margin-top:2px;">Individual project · live</div>
         <div class="proj-section-label">The Problem</div>
-        <div class="proj-desc">University group project — the brief was to build a real booking platform, not a mockup. Most teams build something that looks like a product but doesn't function like one.</div>
+        <div class="proj-desc">In Bangladesh, reports of damaged roads, uncollected rubbish and utility failures disappear into government offices with no way to follow up.</div>
         <div class="proj-section-label">What I Built</div>
-        <div class="proj-desc">Led the team to build a fully working booking system with Stripe payments, real-time availability, admin analytics, and a 90+ Lighthouse score. Designed the database schema and led architecture decisions throughout.</div>
+        <div class="proj-desc">Residents report a problem with a photo and location, then track it publicly until it is resolved. It groups duplicate reports, routes each one to the department responsible, marks a problem fixed only when the original reporter confirms it, and drafts formal complaint letters in English and Bengali when an authority does not respond.</div>
         <div class="proj-tags">
-          <span class="proj-tag">Laravel</span>
-          <span class="proj-tag">Livewire</span>
+          <span class="proj-tag">Next.js</span>
+          <span class="proj-tag">TypeScript</span>
+          <span class="proj-tag">Supabase</span>
           <span class="proj-tag">PostgreSQL</span>
-          <span class="proj-tag">Stripe</span>
         </div>
-        <a href="https://github.com/azmainalfi22" class="proj-link">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
+        <a href="https://chokh-e-dekha.vercel.app" target="_blank" class="proj-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          chokh-e-dekha.vercel.app
         </a>
       </div>
 
       <div class="proj-card rv" style="transition-delay:.15s">
         <div class="proj-top">
-          <div class="proj-icon">🦾</div>
-          <span class="proj-badge">Robotics</span>
+          <div class="proj-icon">💊</div>
+          <span class="proj-badge">ENTERPRISE · LIVE</span>
         </div>
-        <div class="proj-title">4-DOF Robotic Arm</div>
+        <div class="proj-title">Pharmazine</div>
+        <div class="proj-desc" style="color:var(--text-muted);font-size:.8rem;margin-top:2px;">Started at Xactidea Ltd. · later extended independently</div>
         <div class="proj-section-label">The Problem</div>
-        <div class="proj-desc">University robotics project — building a precise, controllable arm with no expensive components and no off-the-shelf controller.</div>
+        <div class="proj-desc">Small pharmacies lose money by running out of a medicine and by letting stock expire. Because medicines arrive in batches with different expiry dates, tracking it by hand is difficult.</div>
         <div class="proj-section-label">What I Built</div>
-        <div class="proj-desc">A four-axis arm controlled wirelessly via MPU6050 gyroscope and nRF24L01 radio. Inverse kinematics on STM32, 3D-printed links, ±1mm repeatability. PCB designed from scratch in KiCad.</div>
+        <div class="proj-desc">A pharmacy management and point-of-sale system handling sales, stock and purchasing across branches down to individual batches. It reorders automatically when stock runs low or nears expiry, and separates permissions for owners, managers and staff with two-step sign-in.</div>
         <div class="proj-tags">
-          <span class="proj-tag">C++</span>
-          <span class="proj-tag">STM32</span>
-          <span class="proj-tag">KiCad</span>
-          <span class="proj-tag">3D Printing</span>
+          <span class="proj-tag">React</span>
+          <span class="proj-tag">TypeScript</span>
+          <span class="proj-tag">FastAPI</span>
+          <span class="proj-tag">Supabase</span>
         </div>
-        <a href="https://github.com/azmainalfi22" class="proj-link">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
+        <a href="https://pharmazine.netlify.app" target="_blank" class="proj-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          pharmazine.netlify.app
         </a>
       </div>
 
       <div class="proj-card rv" style="transition-delay:.2s">
         <div class="proj-top">
-          <div class="proj-icon">💊</div>
-          <span class="proj-badge">Enterprise App</span>
+          <div class="proj-icon">🤖</div>
+          <span class="proj-badge">ROBOTICS / IoT</span>
         </div>
-        <div class="proj-title">Pharmacy Management System</div>
+        <div class="proj-title">Lil Baymax</div>
+        <div class="proj-desc" style="color:var(--text-muted);font-size:.8rem;margin-top:2px;">University robotics &amp; embedded systems · 2025</div>
         <div class="proj-section-label">The Problem</div>
-        <div class="proj-desc">Most small pharmacies still run on manual stock tracking or basic spreadsheets — no visibility on expiry dates, no financial overview, no alerts when stock gets low.</div>
+        <div class="proj-desc">Healthcare monitoring in low-resource settings usually means someone physically checking on a patient. There is no continuous, mobile way to track vitals and alert a caregiver remotely.</div>
         <div class="proj-section-label">What I Built</div>
-        <div class="proj-desc">A comprehensive management system covering medicine stock, expiry tracking, financial records, and reporting. Built as a prototype for Xactidea — they refined it and delivered it to a client.</div>
+        <div class="proj-desc">A self-balancing two-wheeled robot that reads temperature, pulse, blood oxygen and blood pressure, and sends a mobile alert when a reading leaves the safe range.</div>
         <div class="proj-tags">
-          <span class="proj-tag">PHP</span>
-          <span class="proj-tag">MySQL</span>
-          <span class="proj-tag">JavaScript</span>
-          <span class="proj-tag">Bootstrap</span>
+          <span class="proj-tag">C/C++</span>
+          <span class="proj-tag">ESP32</span>
+          <span class="proj-tag">Sensors</span>
+          <span class="proj-tag">Healthcare IoT</span>
         </div>
-        <span class="proj-link" style="color:var(--text-muted);cursor:default;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Delivered to client
-        </span>
+        <a href="https://github.com/azmainalfi22" target="_blank" class="proj-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+
+      <div class="proj-card rv" style="transition-delay:.25s">
+        <div class="proj-top">
+          <div class="proj-icon">🦾</div>
+          <span class="proj-badge">ROBOTICS</span>
+        </div>
+        <div class="proj-title">4-Joint Robotic Arm</div>
+        <div class="proj-desc" style="color:var(--text-muted);font-size:.8rem;margin-top:2px;">University robotics &amp; embedded systems · 2025</div>
+        <div class="proj-section-label">The Problem</div>
+        <div class="proj-desc">Building a precise, controllable arm without expensive components or an off-the-shelf controller — including the board it runs on.</div>
+        <div class="proj-section-label">What I Built</div>
+        <div class="proj-desc">A four-joint arm controlled by hand movement over a wireless link, running on STM32 on a circuit board I designed myself in KiCad.</div>
+        <div class="proj-tags">
+          <span class="proj-tag">C/C++</span>
+          <span class="proj-tag">STM32</span>
+          <span class="proj-tag">KiCad</span>
+          <span class="proj-tag">Wireless Control</span>
+        </div>
+        <a href="https://github.com/azmainalfi22" target="_blank" class="proj-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
       </div>
 
     </div>
@@ -984,12 +1075,13 @@
           <div class="tl-role">Trainee Software Developer</div>
           <div class="tl-company">Xactidea Ltd</div>
           <div class="tl-meta">SOFTWARE DEVELOPMENT COMPANY &nbsp;·&nbsp; OCT 2025 – JAN 2026</div>
-          <div class="tl-desc">Worked on three software projects in parallel under senior developers. Mostly got involved in sprint planning, writing documentation, and keeping the codebase clean through version control. Not glamorous, but it taught me how real dev teams actually operate day to day.</div>
+          <div class="tl-desc">Built the first version of Pharmazine and delivered it to the company. The engineering problem was reliability: two staff selling at once must not be able to sell the same medicine twice, and the till has to keep working when the internet drops — which is common outside the larger cities.</div>
           <div class="tl-tags">
-            <span class="tl-tag">Agile / Scrum</span>
-            <span class="tl-tag">Git</span>
-            <span class="tl-tag">SDLC</span>
-            <span class="tl-tag">Technical Documentation</span>
+            <span class="tl-tag">React</span>
+            <span class="tl-tag">TypeScript</span>
+            <span class="tl-tag">FastAPI</span>
+            <span class="tl-tag">Supabase</span>
+            <span class="tl-tag">Offline-First</span>
           </div>
         </div>
       </div>
@@ -997,15 +1089,15 @@
       <div class="tl-item">
         <div class="tl-dot-col"><div class="tl-dot" style="border-color:var(--blue);box-shadow:0 0 12px rgba(43,127,255,.3)"></div></div>
         <div class="tl-card">
-          <div class="tl-role">Product &amp; Platform Management Intern</div>
-          <div class="tl-company" style="color:#7FB3FF">a2i – Muktopaath, ICT Division</div>
-          <div class="tl-meta">GOVERNMENT OF BANGLADESH &nbsp;·&nbsp; JUL 2025 – OCT 2025</div>
-          <div class="tl-desc">Worked on Muktopaath — a government e-learning platform used across Bangladesh. Spent most of my time gathering user feedback, documenting feature requirements, and figuring out where the platform was confusing people. Also drafted the Terms &amp; Conditions and Privacy Policy in Bangla, which was its own challenge.</div>
+          <div class="tl-role">Product Intern</div>
+          <div class="tl-company" style="color:#7FB3FF">Aspire to Innovate (a2i) – ICT Division</div>
+          <div class="tl-meta">GOVERNMENT OF BANGLADESH &nbsp;·&nbsp; JUN 2025 – SEP 2025</div>
+          <div class="tl-desc">Worked on Muktopaath, Bangladesh's national online learning platform, used by more than 600,000 learners. Gathered requirements, wrote feature documentation, and tested the website and Android app, describing faults for the development team. Turned real support conversations into a sorted question-and-answer dataset for the platform's help chatbot, and ran weekly sessions on AI and cybersecurity for the team.</div>
           <div class="tl-tags">
             <span class="tl-tag" style="background:var(--blue-dim);border-color:rgba(43,127,255,.2);color:#7FB3FF">Requirements Analysis</span>
-            <span class="tl-tag" style="background:var(--blue-dim);border-color:rgba(43,127,255,.2);color:#7FB3FF">Platform Management</span>
-            <span class="tl-tag" style="background:var(--blue-dim);border-color:rgba(43,127,255,.2);color:#7FB3FF">Stakeholder Communication</span>
-            <span class="tl-tag" style="background:var(--blue-dim);border-color:rgba(43,127,255,.2);color:#7FB3FF">Process Documentation</span>
+            <span class="tl-tag" style="background:var(--blue-dim);border-color:rgba(43,127,255,.2);color:#7FB3FF">QA Testing</span>
+            <span class="tl-tag" style="background:var(--blue-dim);border-color:rgba(43,127,255,.2);color:#7FB3FF">Dataset Curation</span>
+            <span class="tl-tag" style="background:var(--blue-dim);border-color:rgba(43,127,255,.2);color:#7FB3FF">Technical Documentation</span>
           </div>
         </div>
       </div>
@@ -1019,36 +1111,37 @@
     <div class="sec-hd rv" style="margin-bottom:40px;">
       <div class="sec-badge">→ WHERE I'M HEADING</div>
       <h2 class="sec-title" style="font-size:clamp(1.8rem,3.5vw,2.4rem)">Focus Areas</h2>
-      <p class="sec-sub">From building systems to understanding them</p>
+      <p class="sec-sub">Building AI that is practical, measurable and honest about its limits</p>
     </div>
     <div class="focus-grid rv" style="transition-delay:.1s">
       <div class="focus-card">
-        <div class="focus-icon">📊</div>
-        <div class="focus-title">Business Analytics</div>
-        <div class="focus-desc">Translating data into decisions. Understanding business processes, finding inefficiencies, presenting insights that actually get acted on.</div>
+        <div class="focus-icon">🔬</div>
+        <div class="focus-title">Applied ML Research</div>
+        <div class="focus-desc">Testing whether a claim survives a controlled experiment — one process, changing only the variable in question — and reporting the answer whichever way it comes out.</div>
         <div class="focus-tags">
-          <span class="focus-tag tag-gold" style="font-size:.7rem;padding:3px 10px;">Power BI</span>
-          <span class="focus-tag tag-gold" style="font-size:.7rem;padding:3px 10px;">Tableau</span>
-          <span class="focus-tag tag-gold" style="font-size:.7rem;padding:3px 10px;">SQL</span>
+          <span class="focus-tag tag-gold" style="font-size:.7rem;padding:3px 10px;">Experiment Design</span>
+          <span class="focus-tag tag-gold" style="font-size:.7rem;padding:3px 10px;">Significance Testing</span>
+          <span class="focus-tag tag-gold" style="font-size:.7rem;padding:3px 10px;">PyTorch</span>
         </div>
       </div>
       <div class="focus-card">
-        <div class="focus-icon">🔗</div>
-        <div class="focus-title">Systems Thinking</div>
-        <div class="focus-desc">Four years of building systems means I understand how they break, how data flows through them, and what happens when requirements aren't clear.</div>
+        <div class="focus-icon">🩺</div>
+        <div class="focus-title">Healthcare AI</div>
+        <div class="focus-desc">Clinical documentation, medical imaging and biosignals — domains where a model being confidently wrong has a cost, so how you measure it matters as much as how you build it.</div>
         <div class="focus-tags">
-          <span class="focus-tag tag-blue" style="font-size:.7rem;padding:3px 10px;">SDLC</span>
-          <span class="focus-tag tag-blue" style="font-size:.7rem;padding:3px 10px;">Agile</span>
-          <span class="focus-tag tag-blue" style="font-size:.7rem;padding:3px 10px;">Requirements</span>
+          <span class="focus-tag tag-blue" style="font-size:.7rem;padding:3px 10px;">Clinical NLP</span>
+          <span class="focus-tag tag-blue" style="font-size:.7rem;padding:3px 10px;">Medical Imaging</span>
+          <span class="focus-tag tag-blue" style="font-size:.7rem;padding:3px 10px;">Biosignals</span>
         </div>
       </div>
       <div class="focus-card">
-        <div class="focus-icon">🤝</div>
-        <div class="focus-title">Stakeholder Work</div>
-        <div class="focus-desc">At a2i I spent more time talking to people than writing code. Gathering feedback, understanding user needs, translating that into something developers can act on.</div>
+        <div class="focus-icon">⚙️</div>
+        <div class="focus-title">Reliable AI Systems</div>
+        <div class="focus-desc">Evaluation that catches what wording-similarity scores miss, and software around the model that keeps working when the network, the data or the user does something unexpected.</div>
         <div class="focus-tags">
-          <span class="focus-tag tag-teal" style="font-size:.7rem;padding:3px 10px;">Communication</span>
-          <span class="focus-tag tag-teal" style="font-size:.7rem;padding:3px 10px;">Documentation</span>
+          <span class="focus-tag tag-teal" style="font-size:.7rem;padding:3px 10px;">Model Evaluation</span>
+          <span class="focus-tag tag-teal" style="font-size:.7rem;padding:3px 10px;">FastAPI</span>
+          <span class="focus-tag tag-teal" style="font-size:.7rem;padding:3px 10px;">Local LLMs</span>
         </div>
       </div>
     </div>
@@ -1072,35 +1165,50 @@
 
       <div class="skill-card">
         <div class="skill-head">
-          <div class="skill-ico">⚡</div>
-          <div class="skill-cat">Languages &amp; Frameworks</div>
+          <div class="skill-ico">🧠</div>
+          <div class="skill-cat">Machine Learning &amp; Data</div>
         </div>
         <div class="skill-chips">
-          <span class="chip">Python</span><span class="chip">PHP</span><span class="chip">Laravel</span>
-          <span class="chip">C/C++</span><span class="chip">JavaScript</span><span class="chip">Java</span><span class="chip">React</span>
+          <span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span>
+          <span class="chip">scikit-learn</span><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">SciPy</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head">
+          <div class="skill-ico">🔬</div>
+          <div class="skill-cat">ML Methods &amp; Evaluation</div>
+        </div>
+        <div class="skill-chips">
+          <span class="chip">Image Classification</span><span class="chip">Transfer Learning</span>
+          <span class="chip">Imbalanced Data</span><span class="chip">NLP</span>
+          <span class="chip">Experiment Design</span><span class="chip">Significance Testing</span>
+          <span class="chip">Model Evaluation</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head">
+          <div class="skill-ico">⚡</div>
+          <div class="skill-cat">Programming &amp; Web</div>
+        </div>
+        <div class="skill-chips">
+          <span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">C/C++</span>
+          <span class="chip">Java</span><span class="chip">PHP</span><span class="chip">React</span>
+          <span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">Laravel</span>
+          <span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">Tailwind CSS</span>
         </div>
       </div>
 
       <div class="skill-card">
         <div class="skill-head">
           <div class="skill-ico">🗃️</div>
-          <div class="skill-cat">Data &amp; Analytics</div>
+          <div class="skill-cat">Databases &amp; Analytics</div>
         </div>
         <div class="skill-chips">
-          <span class="chip">SQL / MySQL</span><span class="chip">PostgreSQL</span>
-          <span class="chip">Statistical Analysis</span><span class="chip">Data Modelling</span>
-          <span class="chip">Database Systems</span><span class="chip">Linear Algebra</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-head">
-          <div class="skill-ico">🔧</div>
-          <div class="skill-cat">Embedded &amp; IoT</div>
-        </div>
-        <div class="skill-chips">
-          <span class="chip">ESP32</span><span class="chip">STM32</span><span class="chip">Arduino</span>
-          <span class="chip">PID Control</span><span class="chip">Sensors</span><span class="chip">nRF24L01</span>
+          <span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">MySQL</span>
+          <span class="chip">Redis</span><span class="chip">SQL</span>
+          <span class="chip">Power BI</span><span class="chip">Tableau</span>
         </div>
       </div>
 
@@ -1110,35 +1218,70 @@
           <div class="skill-cat">Tools &amp; Infrastructure</div>
         </div>
         <div class="skill-chips">
-          <span class="chip">Git / GitHub</span><span class="chip">GitHub Actions</span>
-          <span class="chip">Redis</span><span class="chip">Linux</span>
-          <span class="chip">CI/CD</span><span class="chip">Prompt Engineering</span>
+          <span class="chip">Docker</span><span class="chip">Git / GitHub</span><span class="chip">GitHub Actions</span>
+          <span class="chip">Automated Testing</span><span class="chip">Linux</span>
+          <span class="chip">Vercel</span><span class="chip">Netlify</span><span class="chip">Render</span>
         </div>
       </div>
 
       <div class="skill-card">
         <div class="skill-head">
-          <div class="skill-ico">📋</div>
-          <div class="skill-cat">Business &amp; Analysis</div>
+          <div class="skill-ico">🔧</div>
+          <div class="skill-cat">Embedded &amp; Hardware</div>
         </div>
         <div class="skill-chips">
-          <span class="chip">System Analysis &amp; Design</span><span class="chip">Requirements Analysis</span>
-          <span class="chip">Agile / Scrum</span><span class="chip">Process Documentation</span>
-          <span class="chip">Stakeholder Comms</span><span class="chip">MS Office</span>
+          <span class="chip">ESP32</span><span class="chip">STM32</span><span class="chip">Arduino</span>
+          <span class="chip">KiCad</span><span class="chip">Sensors</span><span class="chip">PID Control</span>
         </div>
       </div>
 
       <div class="skill-card">
         <div class="skill-head">
           <div class="skill-ico">🌐</div>
-          <div class="skill-cat">Languages &amp; Certs</div>
+          <div class="skill-cat">Languages</div>
         </div>
         <div class="skill-chips">
           <span class="chip">Bengali (Native)</span><span class="chip">English — IELTS 7.5</span>
-          <span class="chip">Hindi (Conversational)</span><span class="chip">A-Levels: Triple A</span>
+          <span class="chip">Hindi (Conversational)</span>
         </div>
       </div>
 
+    </div>
+
+    <!-- certifications & leadership -->
+    <div class="sec-hd rv" style="margin-top:70px;margin-bottom:36px;">
+      <div class="sec-badge">★ BEYOND THE DEGREE</div>
+      <h2 class="sec-title" style="font-size:clamp(1.6rem,3vw,2.1rem)">Certifications &amp; Leadership</h2>
+    </div>
+    <div class="focus-grid rv" style="transition-delay:.1s">
+      <div class="focus-card">
+        <div class="focus-icon">🎓</div>
+        <div class="focus-title">AI Short Courses</div>
+        <div class="focus-desc">Anthropic and CodePath.org, 2026 — Model Context Protocol (introduction and advanced), Claude with Amazon Bedrock, Claude Code, and three on using AI tools effectively and responsibly.</div>
+        <div class="focus-tags">
+          <span class="focus-tag tag-gold" style="font-size:.7rem;padding:3px 10px;">MCP</span>
+          <span class="focus-tag tag-gold" style="font-size:.7rem;padding:3px 10px;">Amazon Bedrock</span>
+          <span class="focus-tag tag-gold" style="font-size:.7rem;padding:3px 10px;">Claude Code</span>
+        </div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">🔐</div>
+        <div class="focus-title">Cyber Security V1</div>
+        <div class="focus-desc">DIKKHA Project, ICT Division, Government of Bangladesh, 2025. Also ran weekly sessions on AI and cybersecurity for the team during my a2i internship.</div>
+        <div class="focus-tags">
+          <span class="focus-tag tag-blue" style="font-size:.7rem;padding:3px 10px;">ICT Division</span>
+          <span class="focus-tag tag-blue" style="font-size:.7rem;padding:3px 10px;">2025</span>
+        </div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">🤝</div>
+        <div class="focus-title">Leadership &amp; Volunteering</div>
+        <div class="focus-desc">Student Ambassador for Student World Bangladesh. Elected Class Representative at BRAC University. Organised career fairs and volunteered in flood relief and blood donation drives.</div>
+        <div class="focus-tags">
+          <span class="focus-tag tag-teal" style="font-size:.7rem;padding:3px 10px;">Student Ambassador</span>
+          <span class="focus-tag tag-teal" style="font-size:.7rem;padding:3px 10px;">Class Representative</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1156,7 +1299,7 @@
       <a href="mailto:azmainalfi.aha@gmail.com" class="contact-card">
         <div class="c-icon">✉️</div>
         <div class="c-title">Email</div>
-        <div class="c-info"><span class="__cf_email__" data-cfemail="7e1f04131f17101f121817501f161f3e19131f1712501d1113">[email&#160;protected]</span></div>
+        <div class="c-info">azmainalfi.aha@gmail.com</div>
       </a>
       <a href="tel:+8801301754756" class="contact-card">
         <div class="c-icon">📞</div>
@@ -1230,7 +1373,7 @@ window.addEventListener('scroll',()=>{
 });
 
 /* ── TYPEWRITER ── */
-const roles=['Full-Stack Developer','CSE Graduate','Laravel Developer','Embedded Systems Builder','Problem Solver','Always Learning'];
+const roles=['Machine Learning Engineer','Applied AI Researcher','Software Engineer','Healthcare AI Builder','CSE Graduate','Always Learning'];
 let ri=0,ci=0,del=false;
 const tw=document.getElementById('tw');
 function type(){
@@ -1250,10 +1393,11 @@ document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 /* ── COUNTER ── */
 function countUp(el,target){
   let n=0;
+  const suffix=el.dataset.suffix||'';
   const dur=1200,step=dur/target;
   const id=setInterval(()=>{
     n++;
-    el.textContent=n+(target>=6&&target<12?'+':target===12?'+':'');
+    el.textContent=n+suffix;
     if(n>=target)clearInterval(id);
   },step);
 }
@@ -1318,11 +1462,11 @@ document.getElementById('herocube')?.addEventListener('mouseleave',function(){th
   const rctx=rc.getContext('2d');
   const W=rc.width,H=rc.height,cx=W/2,cy=H/2-5,r=Math.min(W,H)*.36;
   const axes=[
-    {label:'Full-Stack Dev',val:.85,color:'#F0A500'},
-    {label:'Data & Analytics',val:.60,color:'#2B7FFF'},
-    {label:'Embedded Systems',val:.78,color:'#4ECFAE'},
-    {label:'Business Analysis',val:.65,color:'#7FB3FF'},
-    {label:'Problem Solving',val:.88,color:'#F0A500'},
+    {label:'Machine Learning',val:.85,color:'#F0A500'},
+    {label:'Research & Evaluation',val:.82,color:'#2B7FFF'},
+    {label:'Software Engineering',val:.84,color:'#4ECFAE'},
+    {label:'Healthcare AI',val:.74,color:'#7FB3FF'},
+    {label:'Embedded Systems',val:.76,color:'#F0A500'},
   ];
   const n=axes.length;
   let p=0;
@@ -1377,11 +1521,11 @@ document.getElementById('herocube')?.addEventListener('mouseleave',function(){th
   setup();
   const W=src.offsetWidth||800,H=160;
   const rings=[
-    {label:'Laravel / PHP',pct:.88,color:'#F0A500'},
-    {label:'Python & Data',pct:.62,color:'#2B7FFF'},
-    {label:'C / C++',pct:.75,color:'#4ECFAE'},
-    {label:'SQL & DBs',pct:.70,color:'#7FB3FF'},
-    {label:'Business Ops',pct:.65,color:'#F0A500'},
+    {label:'Python & ML',pct:.88,color:'#F0A500'},
+    {label:'Research & Eval',pct:.82,color:'#2B7FFF'},
+    {label:'TypeScript / React',pct:.80,color:'#4ECFAE'},
+    {label:'SQL & Databases',pct:.75,color:'#7FB3FF'},
+    {label:'Embedded C/C++',pct:.72,color:'#F0A500'},
   ];
   const spacing=W/rings.length;const radius=H*.36;let prog=0;
   function frameR(){
