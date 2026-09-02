@@ -274,9 +274,9 @@
     }
     .soc a:hover{ color:var(--accent); border-color:var(--accent-line); }
 
-    /* ── REVEAL ── */
-    .rv{ opacity:0; transform:translateY(14px); transition:opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1); }
-    .rv.vis{ opacity:1; transform:none; }
+    /* ── REVEAL (only when JS is running; otherwise everything renders visible) ── */
+    .js .rv{ opacity:0; transform:translateY(14px); transition:opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1); }
+    .js .rv.vis{ opacity:1; transform:none; }
 
     /* ── RESPONSIVE ── */
     @media(max-width:940px){
@@ -305,7 +305,7 @@
 
     @media(prefers-reduced-motion:reduce){
       html{ scroll-behavior:auto; }
-      .rv{ opacity:1; transform:none; transition:none; }
+      .js .rv{ opacity:1; transform:none; transition:none; }
       .card:hover, .c-card:hover{ transform:none; }
       #progress{ transition:none; }
     }
@@ -316,12 +316,13 @@
       section{ padding:16px 0; break-inside:avoid; }
       .band{ background:#fff; }
       .card, .c-card, .facts{ break-inside:avoid; border:1px solid #ccc; box-shadow:none; }
-      .rv{ opacity:1; transform:none; }
+      .js .rv{ opacity:1; transform:none; }
       a{ text-decoration:none; color:#000; }
     }
   </style>
 </head>
 <body>
+<script>document.documentElement.className = 'js';</script>
 
 <div id="progress"></div>
 
