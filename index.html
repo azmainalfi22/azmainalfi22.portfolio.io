@@ -154,6 +154,23 @@
     }
     .cred-strip b{ color:var(--ink); font-weight:500; }
 
+    /* ── PORTRAIT ── mounted like a framed print: outer frame, card-coloured
+       mat, hairline where the mat meets the image. Removes itself if the
+       image file is absent (see the onerror handler on the img). */
+    .portrait{
+      max-width:250px; margin:0 0 24px;
+      background:var(--card);
+      border:1px solid var(--line-strong);
+      border-radius:var(--r);
+      padding:9px;
+      box-shadow:0 6px 22px rgba(32,27,21,.05);
+    }
+    .portrait img{
+      display:block; width:100%; height:auto;
+      aspect-ratio:4/5; object-fit:cover; object-position:center 18%;
+      border:1px solid var(--line);
+    }
+
     /* ── FACT PANEL ── */
     .facts{ border:1px solid var(--line); background:var(--card); border-radius:var(--r); padding:6px 26px 8px; }
     .fact{ padding:18px 0; border-bottom:1px solid var(--line); }
@@ -379,7 +396,13 @@
         </div>
       </div>
 
-      <aside class="facts rv" style="transition-delay:.1s">
+      <div class="rv" style="transition-delay:.1s">
+      <figure class="portrait">
+        <img src="./profile.jpg" alt="Mohammad Azmain Hossain Alfi"
+             onerror="this.parentElement.remove()">
+      </figure>
+
+      <aside class="facts">
         <div class="fact">
           <div class="fact-k">Education</div>
           <div class="fact-v">B.Sc. Computer Science &amp; Engineering
@@ -409,6 +432,7 @@
           </div>
         </div>
       </aside>
+      </div>
     </div>
   </div>
 </section>
